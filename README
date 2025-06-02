@@ -1,0 +1,31 @@
+# LSTM Stock Price Predictor
+
+Este projeto utiliza uma rede neural LSTM para prever preços de ações, com pipeline de experimentos rastreado via MLflow, API Flask para inferência e suporte a Docker.
+
+---
+
+## Estrutura de Pastas
+
+```plaintext
+lstm-stock-predictor/
+│
+├── data/                  # (opcional) Datasets baixados
+├── notebooks/             # Jupyter Notebooks para EDA e experimentos
+│   └── eda.ipynb
+├── src/                   # Código-fonte principal
+│   ├── data_preprocessing.py
+│   ├── model.py
+│   ├── train.py
+│   ├── predict.py
+│   └── utils.py
+├── api/                   # Código da API Flask
+│   ├── app.py
+│   └── requirements.txt
+├── docker/                # Arquivos para Docker
+│   └── Dockerfile
+├── saved_models/          # Modelos e scalers salvos
+│   ├── lstm_model.h5
+│   └── scaler.save
+├── README.md
+└── .gitignore
+```
