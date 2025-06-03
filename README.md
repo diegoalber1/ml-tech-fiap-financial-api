@@ -33,12 +33,15 @@ Este projeto implementa um modelo preditivo baseado em redes neurais LSTM para p
 ## 📁 Estrutura do Projeto
 
 ```plaintext
-├── data/ # Dados baixados de ações
 ├── saved_models/ # Modelos e scaler salvos
-├── api.py # API Flask para predição
-├── train_model.py # Script de treino e avaliação
+├── api
+├──── app.py # API Flask para predição
+├── notebooks
+├──── data/ # Dados baixados de ações
+├──── stocks-model-training.ipynb # API Notebook para treino e deploy do modelo
 ├── requirements.txt
 ├── Dockerfile
+├── start.sh
 └── README.md
 ```
 
