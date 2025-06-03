@@ -24,7 +24,7 @@ Este projeto implementa um modelo preditivo baseado em redes neurais LSTM para p
 - yfinance
 - Flask
 - MLflow
-1- Flask Monitoring Dashboard
+- Flask Monitoring Dashboard
 - Docker (para deploy)
 
 ---
@@ -72,13 +72,19 @@ python train_model.py
 ### 1. Rodar a API localmente
 
 ```bash
-python api.py
+python api/app.py
+
+mlflow ui --host 0.0.0.0 --port 5001
 ```
 Acesse a API em http://localhost:5000
 
 Dashboard de monitoramento:
 
 http://localhost:5000/dashboard
+
+Mlops UI:
+
+http://localhost:5001
 
 ### 2. Exemplo de requisição com curl:
 
