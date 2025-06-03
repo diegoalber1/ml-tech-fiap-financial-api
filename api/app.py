@@ -4,12 +4,15 @@ import tensorflow as tf
 import joblib
 import mlflow
 import flask_monitoringdashboard as dashboard
+import os
 
 app = Flask(__name__)
 
 # Carrega modelo e scaler
-model = tf.keras.models.load_model("lstm_model.h5")
-scaler = joblib.load("scaler.save")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = tf.keras.models.load_model(os.path.join(BASE_DIR, "../saved_models/lstm_stock_model.h5"))
+scaler = joblib.load(os.path.join(BASE_DIR, "../saved_models/scaler.save"))
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -34,8 +37,8 @@ def predict():
 
     return jsonify({'prediction': float(pred)})
 
+dashboard.bind(app)
 if __name__ == '__main__':
     app.run(debug=True)
 
 
-dashboard.bind(app)

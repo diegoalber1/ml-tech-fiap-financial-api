@@ -9,22 +9,16 @@ Este projeto utiliza uma rede neural LSTM para prever preços de ações, com pi
 ```plaintext
 lstm-stock-predictor/
 │
-├── data/                  # (opcional) Datasets baixados
+├── data/                  # Datasets baixados
 ├── notebooks/             # Jupyter Notebooks para EDA e experimentos
 │   └── eda.ipynb
-├── src/                   # Código-fonte principal
-│   ├── data_preprocessing.py
-│   ├── model.py
-│   ├── train.py
-│   ├── predict.py
-│   └── utils.py
 ├── api/                   # Código da API Flask
 │   ├── app.py
 │   └── requirements.txt
 ├── docker/                # Arquivos para Docker
 │   └── Dockerfile
 ├── saved_models/          # Modelos e scalers salvos
-│   ├── lstm_model.h5
+│   ├── lstm_stock_model.keras
 │   └── scaler.save
 ├── README.md
 └── .gitignore
