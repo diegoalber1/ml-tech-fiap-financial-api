@@ -12,7 +12,7 @@ yfinance==0.2.56
 
 # API
 flask==3.0.3
-flask-monitoringdashboard==4.0.4 #3.2.3
+flask-monitoringdashboard==3.2.3
 
 
 # MLflow para tracking de experimentos
