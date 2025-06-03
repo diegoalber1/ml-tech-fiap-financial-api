@@ -25,12 +25,14 @@ Este projeto implementa um modelo preditivo baseado em redes neurais LSTM para p
 - Flask
 - MLflow
 - Flask Monitoring Dashboard
+- Notebook (jupyter)
 - Docker (para deploy)
 
 ---
 
 ## 📁 Estrutura do Projeto
 
+```plaintext
 ├── data/ # Dados baixados de ações
 ├── saved_models/ # Modelos e scaler salvos
 ├── api.py # API Flask para predição
@@ -38,13 +40,13 @@ Este projeto implementa um modelo preditivo baseado em redes neurais LSTM para p
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
-
+```
 
 ---
 
 ## 🚀 Como Rodar Localmente
 
-### . Clone o repositório
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/lstm-stock-predictor.git
@@ -55,7 +57,8 @@ cd lstm-stock-predictor
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate 
+# Windows: venv\Scripts\activate
 ```
 ### 3. Instale as dependências
 
@@ -65,7 +68,7 @@ pip install -r requirements.txt
 ## 📊 Treinar o Modelo
 
 ```bash
-python train_model.py
+jupyter nbconvert --to notebook --execute --inplace notebooks/stocks-model-training.ipynb
 ```
 ## 🔁 Fazer Predições com a API
 
