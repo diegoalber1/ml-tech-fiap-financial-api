@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 # Carrega modelo e scaler
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = tf.keras.models.load_model(os.path.join(BASE_DIR, "../saved_models/lstm_stock_model.keras"))
-scaler = joblib.load(os.path.join(BASE_DIR, "../saved_models/scaler.save"))
+model = tf.keras.models.load_model(os.path.join(BASE_DIR, "../notebooks/saved_models/lstm_stock_model.keras"))
+scaler = joblib.load(os.path.join(BASE_DIR, "../notebooks/saved_models/scaler.save"))
 
 
 @app.route('/predict', methods=['POST'])

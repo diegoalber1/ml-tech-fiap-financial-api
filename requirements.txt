@@ -22,3 +22,5 @@ mlflow==2.13.0
 requests==2.32.3
 
 notebook
+
+scikeras
