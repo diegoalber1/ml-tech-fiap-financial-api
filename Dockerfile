@@ -8,7 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia o código da API e modelos salvos
 COPY api/ ./api/
-COPY saved_models/ ./saved_models/
 COPY notebooks/ ./notebooks/
 COPY start.sh .
 
